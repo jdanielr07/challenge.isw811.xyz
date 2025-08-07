@@ -13,11 +13,11 @@
         @if (file_exists(public_path('build/manifest.json')) || file_exists(public_path('hot')))
             @vite(['resources/css/app.css', 'resources/js/app.js'])
         @else
-            <script src="https://cdn.tailwindcss.com"></script>
+            <script src="https://cdn.tailwindcss.com?v={{ time() }}"></script>
         @endif
     </head>
     <body class="antialiased">
-        <div class="min-h-screen bg-gradient-to-br from-gray-50 via-blue-50 to-indigo-100 flex items-center justify-center">
+        <div class="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black flex items-center justify-center">
             <div class="max-w-4xl mx-auto text-center px-6">
                 <!-- Meme Image -->
                 <div class="mb-8">
@@ -28,8 +28,8 @@
                 
                 <!-- Message -->
                 <div class="mb-12">
-                    <p class="text-2xl md:text-3xl font-semibold text-gray-800 mb-4">
-                        "Perdón por no ser el primero... pero aquí estoy" 😅
+                    <p class="text-2xl md:text-3xl font-semibold text-gray-300 mb-4">
+                        "Perdón por no ser el primero... pero aquí estoy" 😔
                     </p>
                 </div>
                 
@@ -37,16 +37,16 @@
                 <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
                     @auth
                         <a href="{{ url('/dashboard') }}" 
-                           class="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-200 font-semibold text-lg">
+                           class="w-full sm:w-auto px-8 py-4 bg-gray-800 text-gray-200 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-200 font-semibold text-lg border border-gray-700 hover:bg-gray-700">
                             Ir al Dashboard
                         </a>
                     @else
                         <a href="{{ route('login') }}" 
-                           class="w-full sm:w-auto px-8 py-4 bg-white text-gray-700 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-200 font-semibold text-lg border-2 border-gray-200">
+                           class="w-full sm:w-auto px-8 py-4 bg-gray-800 text-gray-200 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-200 font-semibold text-lg border border-gray-700 hover:bg-gray-700">
                             Iniciar Sesión
                         </a>
                         <a href="{{ route('register') }}" 
-                           class="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-200 font-semibold text-lg">
+                           class="w-full sm:w-auto px-8 py-4 bg-gray-700 text-gray-200 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-200 font-semibold text-lg border border-gray-600 hover:bg-gray-600">
                             Crear Cuenta
                         </a>
                     @endauth
