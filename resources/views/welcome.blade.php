@@ -66,10 +66,6 @@
                                     Challenge ISW811
                                 </span>
                             </h1>
-                            <p class="text-xl md:text-2xl text-gray-600 mb-8 leading-relaxed">
-                                Una plataforma donde la programación se encuentra con la diversión. 
-                                <span class="font-semibold text-purple-600">¡Perdón por hacerte esperar!</span> 😄
-                            </p>
                             
                             <!-- CTA Buttons -->
                             <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center mb-8">
@@ -96,7 +92,7 @@
                             <div class="relative group">
                                 <!-- Meme Container -->
                                 <div class="relative bg-white rounded-3xl shadow-2xl p-6 transform rotate-3 hover:rotate-0 transition-all duration-300">
-                                    <img src="{{ asset('storage/uploads/perdon.jpg') }}" 
+                                    <img src="https://jdanielr07.s3.us-east-2.amazonaws.com/perdon.jpg" 
                                          alt="Meme - Perdón" 
                                          class="w-full h-auto rounded-2xl shadow-lg">
                                     
@@ -115,33 +111,6 @@
                                 <div class="absolute -bottom-8 -left-8 text-3xl animate-pulse">💻</div>
                                 <div class="absolute top-1/2 -right-12 text-2xl animate-spin">⚡</div>
                             </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Features Grid -->
-                    <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto mt-20">
-                        <div class="bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-200 transform hover:scale-105">
-                            <div class="w-16 h-16 bg-gradient-to-r from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center mb-6 mx-auto transform rotate-12">
-                                <span class="text-3xl">🚀</span>
-                            </div>
-                            <h3 class="text-xl font-semibold text-gray-800 mb-4">Rápido y Moderno</h3>
-                            <p class="text-gray-600">Desarrollado con las últimas tecnologías para ofrecer una experiencia excepcional.</p>
-                        </div>
-                        
-                        <div class="bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-200 transform hover:scale-105">
-                            <div class="w-16 h-16 bg-gradient-to-r from-pink-500 to-pink-600 rounded-2xl flex items-center justify-center mb-6 mx-auto transform -rotate-12">
-                                <span class="text-3xl">🛡️</span>
-                            </div>
-                            <h3 class="text-xl font-semibold text-gray-800 mb-4">Seguro y Confiable</h3>
-                            <p class="text-gray-600">Implementamos las mejores prácticas de seguridad para proteger tus datos.</p>
-                        </div>
-                        
-                        <div class="bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-200 transform hover:scale-105">
-                            <div class="w-16 h-16 bg-gradient-to-r from-yellow-500 to-yellow-600 rounded-2xl flex items-center justify-center mb-6 mx-auto transform rotate-6">
-                                <span class="text-3xl">😄</span>
-                            </div>
-                            <h3 class="text-xl font-semibold text-gray-800 mb-4">Divertido de Usar</h3>
-                            <p class="text-gray-600">Interfaz intuitiva y divertida diseñada para que disfrutes programando.</p>
                         </div>
                     </div>
                 </div>
