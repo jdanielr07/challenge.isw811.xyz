@@ -29,7 +29,7 @@
                 <!-- Message -->
                 <div class="mb-12">
                     <p class="text-2xl md:text-3xl font-semibold text-gray-300 mb-4">
-                        "Perdón por no ser el primero... pero aquí estoy" 😔
+                        Perdón por no ser el primero... pero aquí estoy 😔
                     </p>
                 </div>
                 
