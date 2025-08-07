@@ -1,1 +1,1 @@
-web: php -S 0.0.0.0:$PORT -t public/
+web: echo "Starting server on port $PORT" && echo "Files in public:" && ls -la public/ && php -S 0.0.0.0:$PORT -t public/ -v
