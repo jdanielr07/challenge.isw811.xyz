@@ -18,38 +18,35 @@
     </head>
     <body class="antialiased">
         <!-- Hero Section -->
-        <div class="relative min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
-            <!-- Background Image -->
-            <div class="absolute inset-0 overflow-hidden">
-                <img src="{{ asset('storage/uploads/238ffd1d12c527357ed7bd76817e6ee0.jpg') }}" 
-                     alt="Background" 
-                     class="w-full h-full object-cover opacity-20">
-                <div class="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
-            </div>
+        <div class="min-h-screen bg-gradient-to-br from-purple-100 via-pink-100 to-yellow-100 relative overflow-hidden">
+            <!-- Floating Elements -->
+            <div class="absolute top-20 left-10 w-20 h-20 bg-yellow-300 rounded-full opacity-20 animate-bounce"></div>
+            <div class="absolute top-40 right-20 w-16 h-16 bg-pink-300 rounded-full opacity-30 animate-pulse"></div>
+            <div class="absolute bottom-20 left-1/4 w-12 h-12 bg-purple-300 rounded-full opacity-25 animate-bounce"></div>
             
             <!-- Navigation -->
             <nav class="relative z-10 px-6 py-4">
                 <div class="max-w-7xl mx-auto flex justify-between items-center">
                     <div class="flex items-center space-x-2">
-                        <div class="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-                            <span class="text-white font-bold text-sm">C</span>
+                        <div class="w-10 h-10 bg-gradient-to-r from-purple-600 to-pink-600 rounded-xl flex items-center justify-center transform rotate-12">
+                            <span class="text-white font-bold text-lg">C</span>
                         </div>
-                        <span class="text-xl font-bold text-gray-800">Challenge ISW811</span>
+                        <span class="text-2xl font-bold text-gray-800">Challenge ISW811</span>
                     </div>
                     
                     <div class="flex items-center space-x-4">
                         @auth
                             <a href="{{ url('/dashboard') }}" 
-                               class="px-6 py-2 bg-white text-gray-700 rounded-lg shadow-md hover:shadow-lg transition-all duration-200 font-medium">
+                               class="px-6 py-3 bg-white text-gray-700 rounded-xl shadow-lg hover:shadow-xl transition-all duration-200 font-medium transform hover:scale-105">
                                 Dashboard
                             </a>
                         @else
                             <a href="{{ route('login') }}" 
-                               class="px-6 py-2 text-gray-700 hover:text-gray-900 transition-colors duration-200 font-medium">
+                               class="px-6 py-3 text-gray-700 hover:text-gray-900 transition-colors duration-200 font-medium">
                                 Iniciar Sesión
                             </a>
                             <a href="{{ route('register') }}" 
-                               class="px-6 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg shadow-md hover:shadow-lg transition-all duration-200 font-medium">
+                               class="px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-200 font-medium transform hover:scale-105">
                                 Registrarse
                             </a>
                         @endauth
@@ -59,69 +56,92 @@
             
             <!-- Main Content -->
             <div class="relative z-10 flex items-center justify-center min-h-screen px-6">
-                <div class="max-w-4xl mx-auto text-center">
-                    <!-- Hero Content -->
-                    <div class="mb-12">
-                        <h1 class="text-5xl md:text-7xl font-bold text-gray-800 mb-6 leading-tight">
-                            Bienvenido al
-                            <span class="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                                Challenge ISW811
-                            </span>
-                        </h1>
-                        <p class="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
-                            Una plataforma moderna para demostrar tus habilidades de desarrollo web con Laravel y las mejores tecnologías.
-                        </p>
-                    </div>
-                    
-                    <!-- CTA Buttons -->
-                    <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
-                        @auth
-                            <a href="{{ url('/dashboard') }}" 
-                               class="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-200 font-semibold text-lg">
-                                Ir al Dashboard
-                            </a>
-                        @else
-                            <a href="{{ route('login') }}" 
-                               class="w-full sm:w-auto px-8 py-4 bg-white text-gray-700 rounded-xl shadow-lg hover:shadow-xl transition-all duration-200 font-semibold text-lg border-2 border-gray-200">
-                                Iniciar Sesión
-                            </a>
-                            <a href="{{ route('register') }}" 
-                               class="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-200 font-semibold text-lg">
-                                Crear Cuenta
-                            </a>
-                        @endauth
+                <div class="max-w-6xl mx-auto">
+                    <div class="grid lg:grid-cols-2 gap-12 items-center">
+                        <!-- Left Side - Text Content -->
+                        <div class="text-center lg:text-left">
+                            <h1 class="text-5xl md:text-7xl font-bold text-gray-800 mb-6 leading-tight">
+                                Bienvenido al
+                                <span class="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+                                    Challenge ISW811
+                                </span>
+                            </h1>
+                            <p class="text-xl md:text-2xl text-gray-600 mb-8 leading-relaxed">
+                                Una plataforma donde la programación se encuentra con la diversión. 
+                                <span class="font-semibold text-purple-600">¡Perdón por hacerte esperar!</span> 😄
+                            </p>
+                            
+                            <!-- CTA Buttons -->
+                            <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center mb-8">
+                                @auth
+                                    <a href="{{ url('/dashboard') }}" 
+                                       class="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-200 font-semibold text-lg transform hover:scale-105">
+                                        Ir al Dashboard
+                                    </a>
+                                @else
+                                    <a href="{{ route('login') }}" 
+                                       class="w-full sm:w-auto px-8 py-4 bg-white text-gray-700 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-200 font-semibold text-lg border-2 border-gray-200 transform hover:scale-105">
+                                        Iniciar Sesión
+                                    </a>
+                                    <a href="{{ route('register') }}" 
+                                       class="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-200 font-semibold text-lg transform hover:scale-105">
+                                        Crear Cuenta
+                                    </a>
+                                @endauth
+                            </div>
+                        </div>
+                        
+                        <!-- Right Side - Meme Display -->
+                        <div class="relative">
+                            <div class="relative group">
+                                <!-- Meme Container -->
+                                <div class="relative bg-white rounded-3xl shadow-2xl p-6 transform rotate-3 hover:rotate-0 transition-all duration-300">
+                                    <img src="{{ asset('storage/uploads/perdon.jpg') }}" 
+                                         alt="Meme - Perdón" 
+                                         class="w-full h-auto rounded-2xl shadow-lg">
+                                    
+                                    <!-- Decorative Elements -->
+                                    <div class="absolute -top-4 -right-4 w-8 h-8 bg-yellow-400 rounded-full animate-pulse"></div>
+                                    <div class="absolute -bottom-4 -left-4 w-6 h-6 bg-pink-400 rounded-full animate-bounce"></div>
+                                    
+                                    <!-- Speech Bubble -->
+                                    <div class="absolute -top-12 -left-8 bg-white rounded-2xl px-4 py-2 shadow-lg transform -rotate-12">
+                                        <span class="text-sm font-bold text-gray-700">¡Hola! 👋</span>
+                                    </div>
+                                </div>
+                                
+                                <!-- Floating Icons -->
+                                <div class="absolute -top-8 -right-8 text-4xl animate-bounce">🎉</div>
+                                <div class="absolute -bottom-8 -left-8 text-3xl animate-pulse">💻</div>
+                                <div class="absolute top-1/2 -right-12 text-2xl animate-spin">⚡</div>
+                            </div>
+                        </div>
                     </div>
                     
                     <!-- Features Grid -->
-                    <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-                        <div class="bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-200">
-                            <div class="w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 mx-auto">
-                                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-                                </svg>
+                    <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto mt-20">
+                        <div class="bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-200 transform hover:scale-105">
+                            <div class="w-16 h-16 bg-gradient-to-r from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center mb-6 mx-auto transform rotate-12">
+                                <span class="text-3xl">🚀</span>
                             </div>
                             <h3 class="text-xl font-semibold text-gray-800 mb-4">Rápido y Moderno</h3>
                             <p class="text-gray-600">Desarrollado con las últimas tecnologías para ofrecer una experiencia excepcional.</p>
                         </div>
                         
-                        <div class="bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-200">
-                            <div class="w-16 h-16 bg-gradient-to-r from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center mb-6 mx-auto">
-                                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
-                                </svg>
+                        <div class="bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-200 transform hover:scale-105">
+                            <div class="w-16 h-16 bg-gradient-to-r from-pink-500 to-pink-600 rounded-2xl flex items-center justify-center mb-6 mx-auto transform -rotate-12">
+                                <span class="text-3xl">🛡️</span>
                             </div>
                             <h3 class="text-xl font-semibold text-gray-800 mb-4">Seguro y Confiable</h3>
                             <p class="text-gray-600">Implementamos las mejores prácticas de seguridad para proteger tus datos.</p>
                         </div>
                         
-                        <div class="bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-200">
-                            <div class="w-16 h-16 bg-gradient-to-r from-green-500 to-green-600 rounded-2xl flex items-center justify-center mb-6 mx-auto">
-                                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                </svg>
+                        <div class="bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-200 transform hover:scale-105">
+                            <div class="w-16 h-16 bg-gradient-to-r from-yellow-500 to-yellow-600 rounded-2xl flex items-center justify-center mb-6 mx-auto transform rotate-6">
+                                <span class="text-3xl">😄</span>
                             </div>
-                            <h3 class="text-xl font-semibold text-gray-800 mb-4">Fácil de Usar</h3>
-                            <p class="text-gray-600">Interfaz intuitiva diseñada para que cualquier usuario pueda utilizarla sin problemas.</p>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-4">Divertido de Usar</h3>
+                            <p class="text-gray-600">Interfaz intuitiva y divertida diseñada para que disfrutes programando.</p>
                         </div>
                     </div>
                 </div>
@@ -130,7 +150,7 @@
             <!-- Footer -->
             <footer class="relative z-10 text-center py-8">
                 <p class="text-gray-600">
-                    © 2024 Challenge ISW811. Desarrollado con ❤️ usando Laravel y Tailwind CSS.
+                    © 2024 Challenge ISW811. Desarrollado con ❤️ y mucho humor usando Laravel y Tailwind CSS.
                 </p>
             </footer>
         </div>
