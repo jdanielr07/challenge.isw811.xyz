@@ -9,6 +9,10 @@ export default defineConfig({
         }),
     ],
     build: {
-        outDir: 'public/build',
+        manifest: true,
+    },
+    server: {
+        https: process.env.APP_ENV === 'production',
+        host: true,
     },
 });
