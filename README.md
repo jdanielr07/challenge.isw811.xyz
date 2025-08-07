@@ -74,3 +74,12 @@ grant all privileges on challenge.* to laravel;
 flush privileges;
 quit;
 ```
+
+# Seed
+
+```
+php artisan migrate
+composer install
+npm install
+npm run build
+```
