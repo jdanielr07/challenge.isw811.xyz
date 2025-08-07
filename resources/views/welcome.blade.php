@@ -21,7 +21,7 @@
             <div class="max-w-4xl mx-auto text-center px-6">
                 <!-- Meme Image -->
                 <div class="mb-8">
-                    <img src="{{ asset('storage/uploads/perdon.jpg') }}" 
+                    <img src="https://jdanielr07.s3.us-east-2.amazonaws.com/perdon.jpg"
                          alt="Meme - Perdón" 
                          class="w-full max-w-md mx-auto rounded-2xl shadow-2xl">
                 </div>
